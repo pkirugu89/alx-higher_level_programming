@@ -10,7 +10,7 @@ if number < 0:
 if last_digit > 5:
     description = "greater than 5"
 elif last_digit == 0:
-    description = "is zero"
+    description = "0"
 else:
     description = f"less than 6 and not 0"
 # print the desired output
