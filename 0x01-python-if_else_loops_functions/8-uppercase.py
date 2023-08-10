@@ -7,4 +7,4 @@ def uppercase(s):
         else:
             print(c, end='')
     # Print a new line after processing the string
-    print()
+    #print()
