@@ -4,9 +4,11 @@ number = random.randint(-10000, 10000)
 # Extract the last digit of the number
 last_digit = abs(number) % 10
 # Determine the description based on the last digit
-if last_digit >= 5:
-    print(f"Last digit of {number} is {last_digit} and is greater than 5")
+if last_digit > 5:
+    description = "greater than 5"
 elif last_digit == 0:
-    print(f"Last digit of {number} is {last_digit} and is zero")
+    description = "is zero"
 else:
-    print(f"Last digit of {number} is {last_digit} and is less than 6 and not 0")
+    description =f"less than 6 and not 0"
+# print the desired output    
+print(f"Last digit of {number} is {last_digit} and is {description}")
