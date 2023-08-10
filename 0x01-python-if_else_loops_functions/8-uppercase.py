@@ -8,4 +8,4 @@ def uppercase(s):
         else:
             result += c
     # Print a new line after processing the string
-    print(result)
+    print("{}".format(result))
