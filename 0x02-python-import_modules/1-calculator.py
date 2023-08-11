@@ -2,15 +2,12 @@
 if __name__ == "__main__":
     # import calculator-1
     from calculator_1 import add, sub, mul, div
+    # declaration of var a and b
     a = 10
     b = 5
 
-    sum1 = add(a, b)
-    sub1 = sub(a, b)
-    mul1 = mul(a, b)
-    div1 = div(a, b)
     # output the results
-    print("{} + {} = {}".format(a, b, sum1))
-    print("{} - {} = {}".format(a, b, sub1))
-    print("{} * {} = {}".format(a, b, mul1))
-    print("{} / {} = {}".format(a, b, div1))
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
