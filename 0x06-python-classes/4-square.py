@@ -4,8 +4,8 @@ class Square:
     def __init__(self, size=0):
         """ initialize the size argument."""
         self.__size = size
+
     # square area
-    """ Function that defines an area of a square."""
     def area(self):
         """Returns the square area."""
         return self.__size**2

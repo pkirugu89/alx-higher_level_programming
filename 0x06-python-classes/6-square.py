@@ -5,7 +5,7 @@ class Square:
         """ Initialize both size and position arguments."""
         self.__size = size
         self.__position = position
-    """ Function that defines an area of a square."""
+
     def area(self):
         """Returns the square area."""
         return self.__size**2
@@ -15,7 +15,6 @@ class Square:
     def size(self):
         """Returns the size of a square."""
         return self.__size
-    # size setter method
 
     @size.setter
     def size(self, value):
@@ -24,7 +23,6 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-    # my_print method
 
     def my_print(self):
         """print square method."""

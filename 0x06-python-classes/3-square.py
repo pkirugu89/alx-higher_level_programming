@@ -10,8 +10,6 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
 
-
-    """ Function that defines an area of a square."""
     def area(self):
         """Returns the square area."""
         return self.__size**2
