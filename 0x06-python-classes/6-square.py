@@ -3,7 +3,12 @@
 
 
 class Square:
-    """ This class defines a Square."""
+    """ This class defines a Square.
+
+    Attributes:
+        size (int): the size of square.
+        position (int): the position of square.
+    """
 
     def __init__(self, size=0, position=(0, 0)):
         """ Initialize both size and position arguments.
@@ -61,7 +66,14 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def my_print(self):
-        """print square method."""
+        """print square method.
+        Args:
+        self: local variable.
+
+        Returns:
+        # if True.
+
+        """
         if self.size == 0:
             print()
         else:
@@ -73,13 +85,27 @@ class Square:
     # position getter method
     @property
     def position(self):
-        """ Returns the position."""
+        """ Returns the position.
+        Args:
+        position (int): position of the square.
+
+        Returns:
+        int: position of the square.
+
+        """
         return self.__position
 
     # position setter method
     @position.setter
     def position(self, value):
-        """ position setter method."""
+        """ Position setter method.
+        Args:
+        self: local variable.
+        value (int): variable that holds inputted positions.
+
+        Returns:
+        int: square position.
+        """
         if type(value) != tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integer")
         if any(type(x) != int for x in value) or any(y < 0 for y in value):
