@@ -1,8 +1,18 @@
 #!/usr/bin/python3
+""" This class defines a Square."""
+
+
 class Square:
     """ This class defines a square."""
     def __init__(self, size=0):
-        """ initialize the size argument"""
+        """ initialize the size argument.
+        Args:
+        size (int): size of square.
+
+        Returns:
+        int: The size of square
+
+        """
         self.__size = size
 
         if type(size) != int:
@@ -11,5 +21,11 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def area(self):
-        """Returns the square area."""
+        """Method that returns the square area.
+        Args:
+        self: local variable.
+
+        Returns:
+        int: square area.
+        """
         return self.__size**2
