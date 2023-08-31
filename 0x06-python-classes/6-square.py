@@ -1,22 +1,45 @@
 #!/usr/bin/python3
-"""This class defines a Square."""
+""" This class defines a Square."""
 
 
 class Square:
     """ This class defines a Square."""
+
     def __init__(self, size=0, position=(0, 0)):
-        """ Initialize both size and position arguments."""
+        """ Initialize both size and position arguments.
+        Args:
+        size (int): size of the square
+        position (int): position of squares
+
+        Returns:
+        int: returns both size and position values
+
+        """
         self.__size = size
         self.__position = position
 
     def area(self):
-        """Returns the square area."""
+        """ Method that returns the square area.
+        Args:
+        self: local variable
+
+        Returns:
+        int: square area
+
+        """
         return self.__size**2
 
     # getter method
     @property
     def size(self):
-        """Returns the size of a square."""
+        """ Method that returns the size of a square.
+        Args:
+        self: local variable
+
+        Returns:
+        int: the size of square
+
+        """
         return self.__size
 
     @size.setter
