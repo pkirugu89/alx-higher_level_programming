@@ -1,0 +1,80 @@
+=========================================
+Testing 5-text_indentation.py
+=========================================
+
+This module defines text-indentation function ''text_indentation(text)''.
+
+Usage
+=====
+
+The text is printed with two new lines after each of the characters ''.'',''?''
+and '':''.
+
+::
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation("Hello?")
+	Hello?
+	<BLANKLINE>
+
+No spaces are printed at the start of a line.
+
+::
+
+	>>> text_indentation("  Hi There.")
+	Hi there.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation("   ")
+	
+
+Likewise, no spaces are printed at the end of each printed line.
+
+::
+
+	>>> text_indentation("hello. ")
+	hello.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation(" Hey now. This is messy. ")
+	Hey now.
+	<BLANKLINE>
+	This is messy
+	<BLANKLINE>
+
+New lines within string are printed as normal.
+
+::
+
+	>>> text_indentation("This is a new car: \n Toyota")
+	This is a new car:
+	<BLANKLINE>
+	Toyota
+
+::
+
+	>>> text_indentation("A Good \n new line.")
+	A Good
+	new line.
+	<BLANKLINE>
+
+
+Invalid Text
+=============
+The parameter text must be a string. Otherwise, a TypeError is raised.
+
+::
+
+	>>> text_indentation(7)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+::
+
+	>>> text_indentation({1: "one", 2: "two"})
+	Traceback (most recent call last):
+	TypeError: text must be a string

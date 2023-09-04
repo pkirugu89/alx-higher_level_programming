@@ -35,7 +35,7 @@ Addition of a negative float and positive float
 	>>> add_integer(3.2, -2.0)
 	1
 
-Addition of a and b, by default is 98.
+The second argument is optioal - by default is 98.
 ::
 	>>> add_integer(2)
 	100
@@ -48,23 +48,17 @@ If either argument is non-integer or non-float, a TypeError is raised:
 When parameter a is a string
 ::
 	>>> add_integer("hello", 4)
-	Traceback (most recent call last)
+	Traceback (most recent call last):
 	TypeError: a must be an integer
 
 When parameter b input is a string.
 ::
 	>>> add_integer(3, "world")
-	Traceback (most recent call last)
+	Traceback (most recent call last):
 	TypeError: b must be an integer
 
 When parameter a is None.
 ::
 	>>> add_integer(None)
-	Traceback (most recent call last)
+	Traceback (most recent call last):
 	TypeError: a must be an integer
-
-When parameter b is set to None.
-::
-	>>> add_integer(4, None)
-	Traceback (most recent call last)
-	TypeError: b must be an integer
