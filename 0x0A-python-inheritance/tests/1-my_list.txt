@@ -1,0 +1,37 @@
+====================================
+Method that prints sorted list tests
+====================================
+This python file has only one function named print_sorted
+
+Usage
+=====
+
+''print_sorted(..)'' This function returns a sorted list.
+
+Import the module and start your tests.
+::
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(4)
+	>>> print(my_list)
+	[1, 2, 3, 4]
+
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4]
+
+Test with an empty list
+::
+
+	>>> empty_list = MyList([])
+	>>> empty_list.print_sorted()
+	[]
+
+Test with a single-element list
+::
+
+	>>> single_element_list = MyList([42])
+	>>> single_element_list.print_sorted()
+	[42]
