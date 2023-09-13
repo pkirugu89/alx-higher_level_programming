@@ -41,10 +41,18 @@ Non-Numbers Tests.
 The function print_sorted takes only list of one data types.
 If the list has both int and str values, a TypeError is raised:
 
-When an list has both int and str values
+When an list has both int and str values.
 ::
 	>>> mylist = MyList([1, 2, '3', 4, '5', 6])
 	>>> mylist.print_sorted()
 	Traceback (most recent call last):
 	  ...
 	TypeError: '<' not supported between instances of 'str' and 'int'
+
+Calling 'print_sorted' on a non-MyList object.
+::
+	>>> mlist = [3, 1, 4, 3, 5, 9]
+	>>> mlist.print_sorted()
+	Traceback (most recent call last):
+	 ...
+	AttributeError: 'list' object has no attribute 'print_sorted'
