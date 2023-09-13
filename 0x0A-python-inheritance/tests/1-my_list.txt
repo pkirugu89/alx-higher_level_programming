@@ -35,3 +35,16 @@ Test with a single-element list
 	>>> single_element_list = MyList([42])
 	>>> single_element_list.print_sorted()
 	[42]
+
+Non-Numbers Tests.
+==================
+The function print_sorted takes only list of one data types.
+If the list has both int and str values, a TypeError is raised:
+
+When an list has both int and str values
+::
+	>>> mylist = MyList([1, 2, '3', 4, '5', 6])
+	>>> mylist.print_sorted()
+	Traceback (most recent call last):
+	  ...
+	TypeError: '<' not supported between instances of 'str' and 'int'
