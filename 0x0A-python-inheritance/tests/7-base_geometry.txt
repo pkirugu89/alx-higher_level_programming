@@ -1,0 +1,34 @@
+==================================
+How to use 7-base_geometry.py
+==================================
+
+This python file has only one function named ''integer_validator()''.
+
+Usage.
+======
+Returns True if num is an integer.
+::
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bgeo = BaseGeometry()
+
+Positive integers test.
+::
+	>>> bgeo.integer_validator("my_int", 12)
+
+Errors.
+======
+The 'integer_validator()' will raise errors when a non-integer values or 
+negative integer and NULL value is passed as parameter on the method.
+
+Negative integer test.
+::
+	>>> bgeo.integer_validator("number", -12)
+	Traceback (most recent call last):
+	ValueError: number must be greater than 0
+
+Infinite integer test.
+::
+	>>> bgeo.integer_validator("infnumbers", int('inf'))
+	Traceback (most recent call last):
+	  ...
+	ValueError: invalid literal for int() with base 10: 'inf'

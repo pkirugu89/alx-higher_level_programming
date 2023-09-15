@@ -56,3 +56,10 @@ Calling 'print_sorted' on a non-MyList object.
 	Traceback (most recent call last):
 	 ...
 	AttributeError: 'list' object has no attribute 'print_sorted'
+
+Printing NULL value.
+::
+	>>> mlist.append(NULL)
+	Traceback (most recent call last):
+	 ...
+	NameError: name 'NULL' is not defined
