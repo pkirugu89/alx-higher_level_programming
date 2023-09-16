@@ -95,3 +95,10 @@ Passing a list to integer_validator.
 	Traceback (most recent call last):
 	   ...
 	TypeError: age must be an integer
+
+Passing string to integer_validator.
+::
+	>>> bgeo.integer_validator("age", "4")
+	Traceback (most recent call last):
+	   ...
+	TypeError: age must be an integer
