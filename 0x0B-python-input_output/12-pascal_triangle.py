@@ -4,7 +4,7 @@
 
 def pascal_triangle(n):
     """ Method that returns a list of int triangle of size n."""
-    if n < 0:
+    if n <= 0:
         return []
 
     triangles = [[1]]
