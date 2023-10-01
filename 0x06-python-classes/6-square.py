@@ -1,30 +1,26 @@
 #!/usr/bin/python3
-""" This class defines a Square."""
+"""This class defines a Square."""
 
 
 class Square:
-    """ This class defines a Square.
-
-    Attributes:
-        size (int): the size of square.
-        position (int): the position of square.
-    """
+    """This class defines a Square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """ Initialize both size and position arguments.
+        """
+        Initialize both size and position arguments.
         Args:
         size (int): size of the square
         position (int): position of squares
 
         Returns:
         int: returns both size and position values
-
         """
         self.__size = size
         self.__position = position
 
     def area(self):
-        """ Method that returns the square area.
+        """
+        Method that returns the square area.
         Args:
         self: local variable
 
@@ -37,7 +33,8 @@ class Square:
     # getter method
     @property
     def size(self):
-        """ Method that returns the size of a square.
+        """
+        Method that returns the size of a square.
         Args:
         self: local variable
 
@@ -49,7 +46,8 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """ size setter method.
+        """
+        size setter method.
 
         Args:
         self: local variable.
@@ -66,7 +64,9 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def my_print(self):
-        """print square method.
+        """
+        print square method.
+
         Args:
         self: local variable.
 
@@ -85,7 +85,8 @@ class Square:
     # position getter method
     @property
     def position(self):
-        """ Returns the position.
+        """
+        Returns the position.
         Args:
         position (int): position of the square.
 
@@ -98,7 +99,8 @@ class Square:
     # position setter method
     @position.setter
     def position(self, value):
-        """ Position setter method.
+        """
+        Position setter method.
         Args:
         self: local variable.
         value (int): variable that holds inputted positions.
