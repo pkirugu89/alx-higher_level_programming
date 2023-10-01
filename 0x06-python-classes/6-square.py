@@ -15,8 +15,8 @@ class Square:
         Returns:
         int: returns both size and position values
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """
@@ -28,7 +28,7 @@ class Square:
         int: square area
 
         """
-        return self.__size**2
+        return self.__size ** 2
 
     # getter method
     @property
@@ -57,11 +57,11 @@ class Square:
         int: square size.
 
         """
-        self.__size = value
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
+        self.__size = value
 
     def my_print(self):
         """
@@ -72,9 +72,8 @@ class Square:
 
         Returns:
         # if True.
-
         """
-        if self.size == 0:
+        if self.__size == 0:
             print()
         else:
             for _ in range(self.__position[1]):
@@ -108,8 +107,10 @@ class Square:
         Returns:
         int: square position.
         """
-        if type(value) != tuple or len(value) != 2:
+        if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integer")
-        if any(type(x) != int for x in value) or any(y < 0 for y in value):
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
