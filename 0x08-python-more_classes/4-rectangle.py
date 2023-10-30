@@ -75,6 +75,17 @@ class Rectangle:
     # perimeter of a rectangle
     def perimeter(self):
         """ method that returns a rectangle's perimeter."""
-        if self.__width == 0 or self.__height == 0:
-            return 0
         return 2 * (self.__width + self.__height)
+
+    # print the character '#'
+    def __str__(self):
+        """ Method that retuens the visual rep of rectangle using '#'."""
+        if self.__width == 0 or self.__height == 0:
+            return ''
+        return '\n'.join(['#' * self.__width] * self.__height)
+
+    # method that provides string rep that recreates the object
+    def __repr__(self):
+        """ Method that provides string rep that recreates the object."""
+
+        return f"Rectangle({self.__width}, {self.__height})"
