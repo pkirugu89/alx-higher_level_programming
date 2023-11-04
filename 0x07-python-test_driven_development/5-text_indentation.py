@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+""" Method that indents text."""
+
 
 def text_indentation(text):
+    """
+    Method that returns formatted text indented.
+    """
     # check if text is a string
     if not isinstance(text, str):
         raise TypeError("text must be a string")
