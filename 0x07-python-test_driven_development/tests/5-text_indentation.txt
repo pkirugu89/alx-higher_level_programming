@@ -1,0 +1,24 @@
+==================================
+Text Indentation Tests
+==================================
+''text_indentation()'' print a string until foun a '.' ':' and '?' and print
+a '\n' and continue with the printing
+
+:: with no arguments
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+:: with an integer like argument
+   	>>> text_indentation(5)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+:: with unknow argument
+   	>>> text_indentation(kikulacho)
+	Traceback (most recent call last):
+	...
+	NameError: name 'kikulacho' is not defined

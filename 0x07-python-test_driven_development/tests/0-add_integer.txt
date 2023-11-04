@@ -1,0 +1,81 @@
+===========================================================
+0-add_integer.py tests
+===========================================================
+
+This test file is simple as it has only one function called
+''add_integer()''
+
+Tests:
+========
+''add_integer()'' returns the sum of its two arguments (a and b)
+:: with positive integers
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(4, 2)
+	6
+
+:: without any argument
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+:: with none argument
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+:: with negative numbers
+	>>> add_integer(100, -2)
+	98
+
+:: with only one argument
+	>>> add_integer(2)
+	100
+
+:: with first argument is zero.
+	>>> add_integer(0)
+	98
+
+:: with float and negative numbers
+	>>> add_integer(100.5, -2)
+	98
+
+:: with both arguments is zero
+	>>> add_integer(0, 0)
+	0
+
+:: with a hexadecimal as an argument
+	>>> add_integer(hex(4), 6)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+:: argument b is a string
+	>>> add_integer(4, "Tom")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+:: argument a is a string
+	>>> add_integer("Paul", 10)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+:: when True and False arguments is passed
+	>>> add_integer(True, False)
+	1
+
+:: when True and True arguments are passed
+	>>> add_integer(True, True)
+	2
+
+:: when False and False arguments are passed
+	>>> add_integer(False, False)
+	0
+
+:: when false and True arguments are passed
+	>>> add_integer(false, True)
+	Traceback (most recent call last):
+	NameError: name 'false' is not defined
+
+:: when False and true arguments are passed
+	>>> add_integer(False, true)
+	Traceback (most recent call last):
+	NameError: name 'true' is not defined

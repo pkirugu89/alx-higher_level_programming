@@ -1,0 +1,35 @@
+===========================
+Say My Name Tests
+===========================
+
+''say_my_name()'' prints My name is first_name last_name.
+
+:: importing the 3-say_my_name module
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+:: with only lowercase letters
+   	>>> say_my_name("tom", "cruise")
+	My name is tom cruise
+
+:: with only UPPERCASE
+   	>>> say_my_name("TOM", "HANKS")
+	My name is TOM HANKS
+
+:: with None like argument
+   	>>> say_my_name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+:: with empty strings
+   	>>> say_my_name("", "")
+	My name is  
+
+:: with first argument and second empty
+   	>>> say_my_name("Paula", 234)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+:: with numbers
+   	>>> say_my_name(58, "peter")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
