@@ -4,7 +4,7 @@ Text Indentation Tests
 ''text_indentation()'' print a string until foun a '.' ':' and '?' and print
 a '\n' and continue with the printing
 
-:: with no arguments
+:: with no argument
 	>>> text_indentation = __import__('5-text_indentation').text_indentation
 	>>> text_indentation()
 	Traceback (most recent call last):
@@ -17,8 +17,20 @@ a '\n' and continue with the printing
 	...
 	TypeError: text must be a string
 
-:: with unknow argument
+:: with unknown argument
    	>>> text_indentation(kikulacho)
 	Traceback (most recent call last):
 	...
 	NameError: name 'kikulacho' is not defined
+
+:: Passing test
+	>>> text_indentation("Hello")
+	Hello
+
+:: No Spaces printed at the beginning of text
+	>>> text_indentation("  Hello World")
+	Hello World
+
+:: No spaces printed at the end of each printed line.
+	>>> text_indentation("Hello  ")
+	Hello
