@@ -1,0 +1,104 @@
+============================
+Using 7-base_geometry tests.
+============================
+
+This test file has only one method ''integer_validator()''
+
+Positive Tests.
+===============
+Returns True if num is an integer.
+::
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bgeom = BaseGeometry()
+
+Positive integers test.
+::
+	>>> bgeom.integer_validator("my_int", 20)
+
+Errors.
+=======
+The 'integer_validator()' raises errors when a non-integer values or 
+negative integer and NULL value is passed as parameter on the method.
+
+Negative integer test.
+::
+	>>> bgeom.integer_validator("number", -18)
+	Traceback (most recent call last):
+	ValueError: number must be greater than 0
+
+Infinite integer test.
+::
+	>>> bgeom.integer_validator("infnumbers", int('inf'))
+	Traceback (most recent call last):
+	  ...
+	ValueError: invalid literal for int() with base 10: 'inf'
+
+Printing the area.
+::
+	>>> bgeom.area()
+	Traceback (most recent call last):
+	   ...
+	Exception: area() is not implemented
+
+Passing one argument to integer_validator.
+::
+	>>> bgeom.integer_validator("pkc")
+	Traceback (most recent call last):
+	  ...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Passing a zero value to integer_validator
+::
+	>>> bgeom.integer_validator("pkc", 0)
+	Traceback (most recent call last):
+	  ...
+	ValueError: age must be greater than 0
+
+Passing a tuple to integer_validator
+::
+	>>> bgeom.integer_validator("pkc", (48, ))
+	Traceback (most recent call last):
+	   ...
+	TypeError: age must be an integer
+
+Passing a boolean to integer_validator
+::
+	>>> bgeom.integer_validator("pkc", True)
+	Traceback (most recent call last):
+	  ...
+	TypeError: age must be an integer
+
+Passing a dictionary to integer_validator.
+::
+	>>> bgeom.integer_validator("pkc", {32, 40})
+	Traceback (most recent call last):
+	   ...
+	TypeError: age must be an integer
+
+Passing None value to integer_validator.
+::
+	>>> bgeom.integer_validator("pkc", None)
+	Traceback (most recent call last):
+	   ...
+	TypeError: age must be an integer
+
+Passing no value to integer_validator.
+::
+	>>> bgeom.integer_validator()
+	Traceback (most recent call last):
+	   ...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Passing a list to integer_validator.
+::
+	>>> bgeom.integer_validator("pkc", [36])
+	Traceback (most recent call last):
+	   ...
+	TypeError: age must be an integer
+
+Passing string to integer_validator.
+::
+	>>> bgeom.integer_validator("pkc", "43")
+	Traceback (most recent call last):
+	   ...
+	TypeError: age must be an integer

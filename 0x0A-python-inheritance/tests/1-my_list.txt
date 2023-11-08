@@ -17,31 +17,36 @@ Import the method and conduct tests.
 	>>> my_list.print_sorted()
 	[1, 2, 3, 4]
 
-:: Empty list test
+Empty list test.
+::
 	>>> empty_list = MyList([])
 	>>> empty_list.print_sorted()
 	[]
 
-:: Single element in a list test
+Single element in a list test.
+::
 	>>> single_elem = MyList([50])
 	>>> single_elem.print_sorted()
 	[50]
 
-:: A list with both int and str values
+A list with both int and str values
+::
 	>>> mylist = MyList([1, 2, '3', 4, '5', 6])
 	>>> mylist.print_sorted()
 	Traceback (most recent call last):
 	  ...
 	TypeError: '<' not supported between instances of 'str' and 'int'
 
-:: Calling 'print_sorted' on non-MyList object.
+Calling 'print_sorted' on non-MyList object.
+::
 	>>> mlist = [3, 1, 4, 3, 5, 9]
 	>>> mlist.print_sorted()
 	Traceback (most recent call last):
 	 ...
 	AttributeError: 'list' object has no attribute 'print_sorted'
 
-:: Print the NULL value.
+Print the NULL value.
+::
 	>>> mlist.append(NULL)
 	Traceback (most recent call last):
 	 ...
