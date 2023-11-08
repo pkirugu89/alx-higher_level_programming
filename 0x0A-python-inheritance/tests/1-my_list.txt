@@ -1,0 +1,48 @@
+=====================================
+Method that prints sorted list tests
+=====================================
+
+''print_sorted(..)'' The function returns a sorted list.
+Import the method and conduct tests.
+::
+	>>> MyList = __import__('1-my-list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(4)
+	>>> print(my_list)
+	[1, 2, 3, 4]
+
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4]
+
+:: Empty list test
+	>>> empty_list = MyList([])
+	>>> empty_list.print_sorted()
+	[]
+
+:: Single element in a list test
+	>>> single_elem = MyList([50])
+	>>> single_elem.print_sorted()
+	[50]
+
+:: A list with both int and str values
+	>>> mylist = MyList([1, 2, '3', 4, '5', 6])
+	>>> mylist.print_sorted()
+	Traceback (most recent call last):
+	  ...
+	TypeError: '<' not supported between instances of 'str' and 'int'
+
+:: Calling 'print_sorted' on non-MyList object.
+	>>> mlist = [3, 1, 4, 3, 5, 9]
+	>>> mlist.print_sorted()
+	Traceback (most recent call last):
+	 ...
+	AttributeError: 'list' object has no attribute 'print_sorted'
+
+:: Print the NULL value.
+	>>> mlist.append(NULL)
+	Traceback (most recent call last):
+	 ...
+	NameError: name 'NULL' is not defined
