@@ -67,3 +67,38 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Method creates attributes instances based on a dict.
+        Args:
+            **dictionary (dict): Dict containing attribute-value pairs.
+        Returns:
+            cls: Instance of the class with attributes.
+        """
+        if cls.__name__ == "Rectangle":
+            nw = cls(1, 1)
+        elif cls.__name__ == "Square":
+            nw = cls(1)
+        else:
+            nw = None
+        if nw:
+            nw.update(**dictionary)
+        return nw
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Method that returns instances list.
+        """
+        file_name = cls.__name__ + ".json"
+        lists = []
+        list_dicts = []
+        if os.path.exists(file_name):
+            with open(file_name, 'r') as f:
+                st = f.read()
+                list_dicts = cls.from_json_string(st)
+                for dct in list_dicts:
+                    lists.append(cls.create(**dct))
+        return lists
