@@ -24,6 +24,23 @@ class Rectangle {
       }
     }
   }
+
+  // Instance method rotating the rectangle's width and height
+  rotate () {
+    if (this.width !== undefined && this.height !== undefined) {
+      const tmp = this.width;
+      this.width = this.height;
+      this.height = tmp;
+    }
+  }
+
+  // Instance method to multiply the rectangle's width & height
+  double () {
+    if (this.width !== undefined && this.height !== undefined) {
+      this.width *= 2;
+      this.height *= 2;
+    }
+  }
 }
 
 // Make the Rectangle class visible

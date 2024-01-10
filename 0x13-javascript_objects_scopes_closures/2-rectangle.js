@@ -17,8 +17,8 @@ class Rectangle {
 
   // Method to initialize an empty object
   initializeEmptyObj () {
-	  this.width = undefined;
-	  this.height = undefined;
+    this.width = undefined;
+    this.height = undefined;
   }
 }
 
