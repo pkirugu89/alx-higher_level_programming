@@ -4,12 +4,6 @@ const Square5 = require('./5-square');
 
 // Define the Square class that inherits from Rectangle class.
 class Square extends Square5 {
-  // class cosntructor
-  constructor (size) {
-  // call the super class cosntructor
-    super(size);
-  }
-
   // Instance method for printing the square using character 'c'
   charPrint (c) {
   // If c is undefined, use character 'X'
