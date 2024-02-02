@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Check my status. """
 import requests
 
 if __name__ == "__main__":
